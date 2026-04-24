@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🛒 Grocery List — Week of Apr 23</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.5;
+      background: #f5f5f0;
+      color: #1a1a1a;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background: #2d6a4f;
+      color: white;
+      padding: 18px 16px 14px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    header p {
+      font-size: 13px;
+      opacity: 0.85;
+    }
+
+    .progress-bar-wrap {
+      margin-top: 10px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 99px;
+      height: 6px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 6px;
+      background: #b7e4c7;
+      border-radius: 99px;
+      transition: width 0.3s ease;
+    }
+    .progress-label {
+      font-size: 12px;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    section {
+      margin: 16px 12px 0;
+    }
+
+    .section-header {
+      position: sticky;
+      top: 94px;
+      background: #f5f5f0;
+      padding: 8px 0 4px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #555;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      z-index: 50;
+      border-bottom: 1.5px solid #e0e0d8;
+      margin-bottom: 4px;
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: white;
+      border-radius: 10px;
+      padding: 14px 14px;
+      margin-bottom: 6px;
+      min-height: 52px;
+      cursor: pointer;
+      transition: background 0.15s, opacity 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    .item:active {
+      background: #e8f5e9;
+    }
+
+    .item.checked {
+      opacity: 0.45;
+      background: #f9f9f9;
+    }
+
+    .item.checked .item-name {
+      text-decoration: line-through;
+      color: #999;
+    }
+
+    .checkbox {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      transition: background 0.15s, border-color 0.15s;
+      font-size: 16px;
+    }
+
+    .item.checked .checkbox {
+      background: #2d6a4f;
+      border-color: #2d6a4f;
+      color: white;
+    }
+
+    .item-text {
+      flex: 1;
+    }
+
+    .item-name {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .item-note {
+      font-size: 13px;
+      color: #888;
+      margin-top: 1px;
+    }
+
+    .restock {
+      font-size: 13px;
+      color: #d97706;
+      font-weight: 600;
+      background: #fef3c7;
+      border-radius: 4px;
+      padding: 1px 5px;
+      margin-left: 4px;
+    }
+
+    .meals-banner {
+      margin: 16px 12px 0;
+      background: #e8f4ec;
+      border-radius: 12px;
+      padding: 14px 16px;
+      border-left: 4px solid #2d6a4f;
+    }
+
+    .meals-banner h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2d6a4f;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .meals-banner ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .meals-banner li {
+      font-size: 15px;
+      padding: 2px 0;
+      color: #1a4731;
+    }
+
+    .staple-note {
+      margin: 16px 12px 0;
+      background: #fff8ed;
+      border-radius: 10px;
+      padding: 12px 14px;
+      border-left: 4px solid #f59e0b;
+      font-size: 14px;
+      color: #78350f;
+    }
+
+    .staple-note strong { display: block; margin-bottom: 4px; }
+
+    .clear-btn {
+      display: block;
+      margin: 20px 12px 0;
+      padding: 14px;
+      background: #eee;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #555;
+      cursor: pointer;
+      text-align: center;
+      width: calc(100% - 24px);
+    }
+
+    .clear-btn:active { background: #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🛒 Grocery List</h1>
+  <p>Week of Apr 23 · <strong>Week 1</strong> · Pass 1</p>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" id="progress-bar" style="width:0%"></div>
+  </div>
+  <div class="progress-label" id="progress-label">0 of 0 checked</div>
+</header>
+
+<div class="meals-banner">
+  <h2>🍽 This Week's Meals</h2>
+  <ul>
+    <li>🐟 Salmon Teriyaki — jasmine rice, cucumber salad</li>
+    <li>🍗 Oven Chicken Thighs — roasted veg, arugula salad</li>
+    <li>🍚 Cozy Bowl — ginger eggs, buttered rice, Persian cucumbers</li>
+  </ul>
+</div>
+
+<!-- PRODUCE -->
+<section>
+  <div class="section-header">🥦 Produce</div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Salmon fillet, ~2 lbs</div>
+      <div class="item-note">Fresh or thawed · Salmon Teriyaki</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Cucumber × 2</div>
+      <div class="item-note">Regular size · teriyaki cucumber salad</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Persian cucumbers × 9</div>
+      <div class="item-note">Small pack or bag · Cozy Bowl (3x scaled)</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Fresh ginger, ~4-inch piece</div>
+      <div class="item-note">Teriyaki + Cozy Bowl</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Garlic, 1 head</div>
+      <div class="item-note">Teriyaki glaze</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Broccoli × 1 head</div>
+      <div class="item-note">Roasting veg for chicken thighs</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Zucchini × 2</div>
+      <div class="item-note">Roasting veg for chicken thighs</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Carrots × 4</div>
+      <div class="item-note">Roasting veg for chicken thighs</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Arugula, 1 bag or bunch</div>
+      <div class="item-note">Chicken thigh salad</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Lemon × 2</div>
+      <div class="item-note">Chicken thighs + dressing</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Avocado × 3</div>
+      <div class="item-note">Always-buy</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Tomato × 2</div>
+      <div class="item-note">Always-buy</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Romaine hearts or butter lettuce</div>
+      <div class="item-note">Always-buy</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROTEIN -->
+<section>
+  <div class="section-header">🥩 Protein / Meat &amp; Seafood</div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Salmon fillet, ~2 lbs</div>
+      <div class="item-note">Fresh or from fish counter · Salmon Teriyaki</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Bone-in skin-on chicken thighs, ~2.5 lbs</div>
+      <div class="item-note">5–6 thighs · Oven Chicken Thighs</div>
+    </div>
+  </div>
+</section>
+
+<!-- DAIRY & EGGS -->
+<section>
+  <div class="section-header">🧀 Dairy &amp; Eggs</div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Large eggs × 12</div>
+      <div class="item-note">Cozy Bowl (scaled 3x = 12 eggs)</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Unsalted butter, 2–3 sticks</div>
+      <div class="item-note">~18 tbsp needed for Cozy Bowl</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Milk, 1 gallon</div>
+      <div class="item-note">Always-buy</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Sandwich cheese</div>
+      <div class="item-note">Always-buy · provolone, fresh mozz, brie, or cheddar</div>
+    </div>
+  </div>
+</section>
+
+<!-- PANTRY -->
+<section>
+  <div class="section-header">🥫 Pantry &amp; Dry Goods</div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Jasmine rice, 5 lb bag</div>
+      <div class="item-note">Salmon Teriyaki · check if stocked</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Short-grain white rice</div>
+      <div class="item-note">Cozy Bowl · different from jasmine — ~6 cups dry</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Soy sauce (low-sodium)</div>
+      <div class="item-note">Teriyaki glaze</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Mirin</div>
+      <div class="item-note">Teriyaki glaze</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Rice vinegar</div>
+      <div class="item-note">Cucumber salad for teriyaki</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Honey (or sugar)</div>
+      <div class="item-note">Teriyaki glaze</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Toasted sesame oil</div>
+      <div class="item-note">Teriyaki + Cozy Bowl</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Sesame seeds (toasted)</div>
+      <div class="item-note">Teriyaki + Cozy Bowl garnish</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Olive oil (extra virgin)</div>
+      <div class="item-note">Chicken thighs + roasted veg</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Kosher salt</div>
+      <div class="item-note">Cozy Bowl + general cooking</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Cereal, 1 box</div>
+      <div class="item-note">Always-buy · skip if well-stocked</div>
+    </div>
+  </div>
+</section>
+
+<!-- STAPLES & HOUSEHOLD -->
+<section>
+  <div class="section-header">🧴 Staples &amp; Household</div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Neutral cooking oil <span class="restock">⚠ check stock</span></div>
+      <div class="item-note">Avocado or canola · restock tracking not yet initialized</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Peanut butter <span class="restock">⚠ check stock</span></div>
+      <div class="item-note">Restock tracking not yet initialized</div>
+    </div>
+  </div>
+</section>
+
+<!-- FROZEN -->
+<section>
+  <div class="section-header">❄️ Frozen</div>
+  <div class="item" style="opacity:0.5; cursor:default;">
+    <div class="checkbox" style="border-color:#eee;"></div>
+    <div class="item-text">
+      <div class="item-name" style="color:#aaa;">Nothing frozen this week</div>
+    </div>
+  </div>
+</section>
+
+<!-- BREAD & BAKERY -->
+<section>
+  <div class="section-header">🍞 Bread &amp; Bakery</div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Sandwich bread</div>
+      <div class="item-note">Always-buy · sourdough, baguette, or ciabatta</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Scones × 2–4 🧒</div>
+      <div class="item-note">Walker's favorite · always-buy</div>
+    </div>
+  </div>
+</section>
+
+<button class="clear-btn" onclick="clearAll()">↩ Uncheck All</button>
+
+<script>
+  const STORAGE_KEY = 'grocery-week1-apr23';
+
+  function getState() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    } catch(e) { return {}; }
+  }
+
+  function saveState(state) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+  }
+
+  function toggle(el) {
+    el.classList.toggle('checked');
+    const name = el.querySelector('.item-name').textContent.trim();
+    const state = getState();
+    if (el.classList.contains('checked')) {
+      state[name] = true;
+      el.querySelector('.checkbox').textContent = '✓';
+    } else {
+      delete state[name];
+      el.querySelector('.checkbox').textContent = '';
+    }
+    saveState(state);
+    updateProgress();
+  }
+
+  function clearAll() {
+    document.querySelectorAll('.item.checked').forEach(el => {
+      el.classList.remove('checked');
+      el.querySelector('.checkbox').textContent = '';
+    });
+    saveState({});
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const items = document.querySelectorAll('.item[onclick]');
+    const checked = document.querySelectorAll('.item[onclick].checked');
+    const pct = items.length ? Math.round(checked.length / items.length * 100) : 0;
+    document.getElementById('progress-bar').style.width = pct + '%';
+    document.getElementById('progress-label').textContent =
+      checked.length + ' of ' + items.length + ' checked';
+  }
+
+  // Restore state on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const state = getState();
+    document.querySelectorAll('.item[onclick]').forEach(el => {
+      const name = el.querySelector('.item-name').textContent.trim();
+      if (state[name]) {
+        el.classList.add('checked');
+        el.querySelector('.checkbox').textContent = '✓';
+      }
+    });
+    updateProgress();
+  });
+</script>
+
+</body>
+</html>
