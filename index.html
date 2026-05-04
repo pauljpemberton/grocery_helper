@@ -140,18 +140,6 @@
       margin-top: 1px;
     }
 
-    .restock-badge {
-      display: inline-block;
-      font-size: 12px;
-      color: #d97706;
-      font-weight: 600;
-      background: #fef3c7;
-      border-radius: 4px;
-      padding: 1px 5px;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-
     .meal-tag {
       display: inline-block;
       font-size: 11px;
@@ -227,7 +215,7 @@
 
 <header>
   <h1>🛒 Grocery List</h1>
-  <p>Week of May 4 &nbsp;·&nbsp; Week 1 &nbsp;·&nbsp; Pass 1</p>
+  <p>Week of May 4 &nbsp;·&nbsp; Week 2 &nbsp;·&nbsp; Pass 1</p>
   <div class="progress-bar-wrap">
     <div class="progress-bar" id="progressBar" style="width:0%"></div>
   </div>
@@ -236,9 +224,9 @@
 
 <div class="meals-banner">
   <h2>🍽 This Week's Meals</h2>
-  <div class="meal-item"><span class="meal-num">1.</span> Salmon Teriyaki — jasmine rice, cucumber salad</div>
-  <div class="meal-item"><span class="meal-num">2.</span> Oven Chicken Thighs — roasted veg, arugula salad</div>
-  <div class="meal-item"><span class="meal-num">3.</span> Cozy Bowl — buttered short-grain rice, ginger scrambled eggs, Persian cucumber</div>
+  <div class="meal-item"><span class="meal-num">1.</span> Sweet &amp; Spicy Tofu with Soba Noodles — edamame on the side</div>
+  <div class="meal-item"><span class="meal-num">2.</span> Skirt Steak with Walnut Sauce — jasmine rice, butter lettuce salad</div>
+  <div class="meal-item"><span class="meal-num">3.</span> Vodka Pasta — rigatoni, Carbone sauce, heavy cream, parmesan</div>
 </div>
 
 <!-- PRODUCE -->
@@ -248,64 +236,48 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Cucumbers — 2</div>
-      <div class="item-note">Regular size · <span class="meal-tag">Teriyaki cucumber salad</span></div>
+      <div class="item-name">Mini cucumbers — 4</div>
+      <div class="item-note">Or 1 large · <span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Persian cucumbers — 6</div>
-      <div class="item-note">Small ones (3x scale) · <span class="meal-tag">Cozy Bowl</span></div>
+      <div class="item-name">Radishes — 4–5</div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Broccoli — 1 head</div>
-      <div class="item-note"><span class="meal-tag">Roasted veg</span></div>
+      <div class="item-name">Cilantro — 1 bunch</div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Zucchini — 2</div>
-      <div class="item-note"><span class="meal-tag">Roasted veg</span></div>
+      <div class="item-name">Limes — 2</div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Carrots — 4–5</div>
-      <div class="item-note">Or a bag · <span class="meal-tag">Roasted veg</span></div>
+      <div class="item-name">Green onions — 1 bunch</div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Arugula — 1 bag</div>
-      <div class="item-note"><span class="meal-tag">Chicken thigh salad</span></div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Lemons — 2</div>
-      <div class="item-note"><span class="meal-tag">Chicken + Cozy Bowl</span></div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Fresh ginger — 1 knob (~3 inches)</div>
-      <div class="item-note"><span class="meal-tag">Teriyaki + Cozy Bowl</span></div>
+      <div class="item-name">Fresh ginger — 1 knob (~1 inch)</div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
@@ -313,7 +285,31 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Garlic — 1 head</div>
-      <div class="item-note"><span class="meal-tag">Teriyaki + Chicken</span></div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba + Walnut Sauce</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Shallot — 1</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak salad</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Lemon — 1</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Butter lettuce — 1 head</div>
+      <div class="item-note">Always-buy · <span class="meal-tag">Skirt Steak salad</span></div>
     </div>
   </div>
 
@@ -336,14 +332,6 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Lettuce — 1 head</div>
-      <div class="item-note">Romaine hearts or butter lettuce · Always-buy</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
       <div class="item-name">Bananas 🧒</div>
       <div class="item-note">Walker · Always-buy</div>
     </div>
@@ -357,16 +345,8 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Salmon fillet — ~2 lbs</div>
-      <div class="item-note">Skin-on preferred · <span class="meal-tag">Salmon Teriyaki</span></div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Bone-in skin-on chicken thighs — 5–6 (~2.5 lbs)</div>
-      <div class="item-note"><span class="meal-tag">Oven Chicken Thighs</span></div>
+      <div class="item-name">Skirt steak — ~1.5–2 lbs</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak with Walnut Sauce</span></div>
     </div>
   </div>
 </section>
@@ -378,16 +358,16 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Eggs — 1 dozen</div>
-      <div class="item-note">Need ~10–12 for Cozy Bowl (scaled 3x) · Always-buy · <span class="meal-tag">Cozy Bowl</span></div>
+      <div class="item-name">Heavy cream — 8 oz</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Unsalted butter — 1 block (4 sticks)</div>
-      <div class="item-note">~18 tbsp for Cozy Bowl scaled + roasting · <span class="meal-tag">Cozy Bowl + Chicken</span></div>
+      <div class="item-name">Parmesan — block or grated (4–6 oz)</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
     </div>
   </div>
 
@@ -396,6 +376,14 @@
     <div class="item-text">
       <div class="item-name">Milk — 1 gallon</div>
       <div class="item-note">Always-buy</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Eggs — 1 dozen</div>
+      <div class="item-note">Always-buy · Vital Farms pasture-raised</div>
     </div>
   </div>
 
@@ -415,48 +403,32 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Jasmine rice — 5 lb bag</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span></div>
+      <div class="item-name">Firm tofu — 2 packages (14 oz each)</div>
+      <div class="item-note"><span class="meal-tag">Sweet &amp; Spicy Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Short-grain white rice — 2–3 lb bag</div>
-      <div class="item-note">Different from jasmine · <span class="meal-tag">Cozy Bowl</span></div>
+      <div class="item-name">Soba noodles (all-buckwheat) — 2 packages (8 oz each)</div>
+      <div class="item-note"><span class="meal-tag">Sweet &amp; Spicy Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Soy sauce</div>
-      <div class="item-note">Low sodium preferred · <span class="meal-tag">Teriyaki sauce</span></div>
+      <div class="item-name">Soy sauce or tamari</div>
+      <div class="item-note">Low sodium preferred · <span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Mirin</div>
-      <div class="item-note"><span class="meal-tag">Teriyaki sauce</span></div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Honey</div>
-      <div class="item-note">Or sugar · <span class="meal-tag">Teriyaki sauce</span></div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Rice vinegar</div>
-      <div class="item-note"><span class="meal-tag">Cucumber salad</span></div>
+      <div class="item-name">Dark brown sugar</div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
@@ -464,15 +436,63 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Sesame oil (toasted)</div>
-      <div class="item-note"><span class="meal-tag">Teriyaki + Cozy Bowl</span></div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Sesame seeds</div>
-      <div class="item-note">Toasted · <span class="meal-tag">Teriyaki + Cozy Bowl</span></div>
+      <div class="item-name">Walnuts</div>
+      <div class="item-note"><span class="meal-tag">Walnut Sauce</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Anchovy paste (or tin of anchovies)</div>
+      <div class="item-note"><span class="meal-tag">Walnut Sauce</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Aleppo pepper</div>
+      <div class="item-note"><span class="meal-tag">Walnut Sauce</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Dried fruit — cherries, cranberries, or apricots</div>
+      <div class="item-note">Pick one · <span class="meal-tag">Walnut Sauce</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Jasmine rice</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Dijon mustard</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak salad dressing</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Red wine vinegar</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak salad dressing</span></div>
     </div>
   </div>
 
@@ -480,7 +500,23 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Olive oil</div>
-      <div class="item-note">Extra virgin · <span class="meal-tag">Chicken thighs</span></div>
+      <div class="item-note">Extra virgin · <span class="meal-tag">Skirt Steak salad dressing</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Carbone spicy vodka sauce — 1 jar</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Pasta — rigatoni or penne, 1 lb</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
     </div>
   </div>
 
@@ -495,8 +531,21 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Walker puffs & pouches 🧒</div>
+      <div class="item-name">Walker puffs &amp; pouches 🧒</div>
       <div class="item-note">PB Puffs + 4–6 assorted pouches (White Leaf, Serenity Kids, NOKA, etc.) · Always-buy</div>
+    </div>
+  </div>
+</section>
+
+<!-- FROZEN -->
+<section>
+  <div class="section-header">🧊 Frozen</div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Edamame — 1 bag</div>
+      <div class="item-note"><span class="meal-tag">Tofu/Soba side</span></div>
     </div>
   </div>
 </section>
