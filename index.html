@@ -193,6 +193,34 @@
       font-weight: 700;
       min-width: 18px;
     }
+
+    #jumpBtn {
+      position: fixed;
+      right: 14px;
+      bottom: 28px;
+      background: #2d6a4f;
+      color: white;
+      border: none;
+      border-radius: 22px;
+      padding: 11px 18px;
+      font-size: 15px;
+      font-weight: 600;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+      cursor: pointer;
+      z-index: 200;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.15s, transform 0.1s;
+      user-select: none;
+    }
+
+    #jumpBtn:active {
+      background: #1e4d38;
+      transform: scale(0.95);
+    }
+
+    #jumpBtn.all-done {
+      background: #888;
+    }
   </style>
 </head>
 <body>
@@ -203,7 +231,7 @@
   <div class="progress-bar-wrap">
     <div class="progress-bar" id="progressBar" style="width:0%"></div>
   </div>
-  <div class="progress-label" id="progressLabel">0 of <span id="totalCount">0</span> checked</div>
+  <div class="progress-label" id="progressLabel">0 of 0 checked</div>
 </header>
 
 <div class="meals-banner">
@@ -515,14 +543,12 @@
   </div>
 </section>
 
+<button id="jumpBtn" onclick="jumpToNext()">↓ Next</button>
+
 <script>
   function toggle(el) {
     el.classList.toggle('checked');
-    if (el.classList.contains('checked')) {
-      el.querySelector('.checkbox').textContent = '✓';
-    } else {
-      el.querySelector('.checkbox').textContent = '';
-    }
+    el.querySelector('.checkbox').textContent = el.classList.contains('checked') ? '✓' : '';
     updateProgress();
   }
 
@@ -530,9 +556,28 @@
     const checkable = Array.from(document.querySelectorAll('.item[onclick]'));
     const checked = checkable.filter(el => el.classList.contains('checked')).length;
     const total = checkable.length;
-    document.getElementById('totalCount').textContent = total;
     document.getElementById('progressBar').style.width = total ? (checked / total * 100) + '%' : '0%';
     document.getElementById('progressLabel').textContent = checked + ' of ' + total + ' checked';
+    const btn = document.getElementById('jumpBtn');
+    if (checked === total && total > 0) {
+      btn.textContent = '✓ Done';
+      btn.classList.add('all-done');
+    } else {
+      btn.textContent = '↓ Next';
+      btn.classList.remove('all-done');
+    }
+  }
+
+  function jumpToNext() {
+    const unchecked = Array.from(document.querySelectorAll('.item[onclick]:not(.checked)'));
+    if (unchecked.length === 0) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const target = unchecked[0];
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight - 12;
+    window.scrollTo({ top, behavior: 'smooth' });
   }
 
   updateProgress();
