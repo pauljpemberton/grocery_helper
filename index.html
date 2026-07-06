@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🛒 Grocery List — Week 1</title>
+  <title>🛒 Grocery List — Week 2</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -234,7 +234,7 @@
 
 <header>
   <h1>🛒 Grocery List</h1>
-  <p>Week of June 22 &nbsp;·&nbsp; Week 1 &nbsp;·&nbsp; Pass 3</p>
+  <p>Week of July 6 &nbsp;·&nbsp; Week 2 &nbsp;·&nbsp; Pass 3</p>
   <div class="progress-bar-wrap">
     <div class="progress-bar" id="progressBar" style="width:0%"></div>
   </div>
@@ -243,10 +243,10 @@
 
 <div class="meals-banner">
   <h2>🍽 This Week's Meals</h2>
-  <div class="meal-item"><span class="meal-num">1.</span> Salmon Teriyaki — jasmine rice, cucumber salad</div>
-  <div class="meal-item"><span class="meal-num">2.</span> Oven Chicken Thighs with Roasted Vegetables — arugula salad</div>
-  <div class="meal-item"><span class="meal-num">3.</span> Cozy Bowl — buttered rice, ginger scrambled eggs, seasoned cucumbers</div>
-  <div class="walker-note">🧒 Walker lunches: Egg Muffins batch week — mini egg muffins (Sun batch prep), dinner leftovers (salmon, chicken thighs, cozy bowl)</div>
+  <div class="meal-item"><span class="meal-num">1.</span> Sweet &amp; Spicy Tofu with Soba Noodles — edamame on the side</div>
+  <div class="meal-item"><span class="meal-num">2.</span> Skirt Steak with Walnut Sauce — rice, butter lettuce salad</div>
+  <div class="meal-item"><span class="meal-num">3.</span> Vodka Pasta — Carbone sauce, heavy cream, rigatoni or penne</div>
+  <div class="walker-note">🧒 Walker lunches: Red Lentil Soup batch week — lentil soup (Sun batch), dinner leftovers (soba, skirt steak, pasta)</div>
 </div>
 
 <!-- PRODUCE -->
@@ -256,8 +256,48 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Persian cucumbers — 5 total</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> <span class="meal-tag">Cozy Bowl</span> · covers cucumber salad + seasoned cucumbers</div>
+      <div class="item-name">Mini cucumbers × 4</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · garnish + side salad</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Radishes × 4</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · garnish</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Cilantro — 1 bunch</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Lime — 1–2</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Green onions — 1 small bunch</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Fresh ginger — 1-inch piece</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span></div>
     </div>
   </div>
 
@@ -265,31 +305,23 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Garlic — 1 head</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span></div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> <span class="meal-tag">Skirt Steak</span> · covers both meals</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Fresh ginger — 2-inch piece</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> <span class="meal-tag">Cozy Bowl</span></div>
+      <div class="item-name">Shallot × 1</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · butter lettuce salad dressing</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Mixed roasting veg — broccoli, zucchini, carrots</div>
-      <div class="item-note"><span class="meal-tag">Oven Chicken Thighs</span> · whatever looks good · zucchini also covers Walker's egg muffin prep</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Arugula — 1 bag</div>
-      <div class="item-note"><span class="meal-tag">Oven Chicken Thighs</span> · salad</div>
+      <div class="item-name">Butter lettuce — 1 head</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · salad — counts as always-buy lettuce</div>
     </div>
   </div>
 
@@ -297,23 +329,23 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Lemon — 1</div>
-      <div class="item-note"><span class="meal-tag">Oven Chicken Thighs</span></div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Bell pepper — 1 🧒</div>
-      <div class="item-note">Walker's Egg Muffins prep (Sunday batch)</div>
+      <div class="item-name">Carrot × 1 🧒</div>
+      <div class="item-note">Walker's Red Lentil Soup (Sunday batch prep)</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Snap peas 🧒</div>
-      <div class="item-note">Walker's Egg Muffins week · Thu lunch side</div>
+      <div class="item-name">Onion × 1 🧒</div>
+      <div class="item-note">Walker's Red Lentil Soup (Sunday batch prep) — check pantry first</div>
     </div>
   </div>
 
@@ -321,7 +353,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Avocados — 2–3</div>
-      <div class="item-note">Always-buy</div>
+      <div class="item-note">Always-buy · also Walker Wed lunch</div>
     </div>
   </div>
 
@@ -344,7 +376,7 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Lettuce — romaine heart or butter</div>
+      <div class="item-name">Baby spinach — 1 bag</div>
       <div class="item-note">Always-buy</div>
     </div>
   </div>
@@ -352,16 +384,8 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Baby spinach — 1 bag</div>
-      <div class="item-note">Always-buy · also covers Walker's egg muffin prep</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
       <div class="item-name">Bananas 🧒</div>
-      <div class="item-note">Always-buy · also Walker Tue lunch</div>
+      <div class="item-note">Always-buy</div>
     </div>
   </div>
 </section>
@@ -373,16 +397,8 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Salmon fillet — ~2 lbs</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · flake plain before saucing for Walker</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Bone-in skin-on chicken thighs — 5–6 (~2.5 lbs)</div>
-      <div class="item-note"><span class="meal-tag">Oven Chicken Thighs</span> · Mary's Organic preferred · shred for Walker</div>
+      <div class="item-name">Skirt steak — 1.5–2 lbs</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · thin-slice for Walker, no sauce</div>
     </div>
   </div>
 </section>
@@ -394,24 +410,24 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Eggs — 1 dozen</div>
-      <div class="item-note">Vital Farms pasture-raised · Always-buy · covers 4 eggs for <span class="meal-tag">Cozy Bowl</span> + Walker's egg muffin prep</div>
+      <div class="item-name">Firm tofu — 2 packages (14 oz each)</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · 1½ pkgs used; buy 2 · also Walker's Tue lunch</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Unsalted butter — 6 tbsp</div>
-      <div class="item-note"><span class="meal-tag">Cozy Bowl</span></div>
+      <div class="item-name">Heavy cream — 8 oz</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Shredded cheese 🧒 — block or bag</div>
-      <div class="item-note">Walker's Egg Muffins prep (Sunday batch)</div>
+      <div class="item-name">Parmesan — block or bag</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
     </div>
   </div>
 
@@ -427,7 +443,15 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Sandwich cheese</div>
-      <div class="item-note">Provolone, fresh mozz, brie, or cheddar · Always-buy</div>
+      <div class="item-note">Provolone, fresh mozz, brie, or cheddar · Always-buy · also Walker Mon lunch (cheese cubes)</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Eggs — 1 dozen</div>
+      <div class="item-note">Vital Farms pasture-raised · Always-buy</div>
     </div>
   </div>
 </section>
@@ -439,64 +463,120 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Short-grain white rice — 2 cups</div>
-      <div class="item-note"><span class="meal-tag">Cozy Bowl</span></div>
+      <div class="item-name">All-buckwheat soba noodles — 8 oz</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · cut short for Walker</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Rice vinegar</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · check stock</div>
+      <div class="item-name">Soy sauce or tamari — ⅓ cup</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · check stock; low sodium preferred</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Toasted sesame oil</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> <span class="meal-tag">Cozy Bowl</span> · check stock</div>
+      <div class="item-name">Dark brown sugar</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · 3 tbsp needed · check stock</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Toasted sesame seeds</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> <span class="meal-tag">Cozy Bowl</span> · check stock</div>
+      <div class="item-name">Sesame oil</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · 2 tbsp · check stock</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Soy sauce</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · check stock · low sodium preferred</div>
+      <div class="item-name">Red-pepper flakes</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · check stock</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Mirin</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · check stock</div>
+      <div class="item-name">Walnuts — ¾ cup</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · walnut sauce base</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Honey or sugar</div>
-      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · check stock — honey not due for restock til July</div>
+      <div class="item-name">Anchovy paste or anchovies — small tube/can</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · walnut sauce</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Extra-virgin olive oil</div>
-      <div class="item-note"><span class="meal-tag">Oven Chicken Thighs</span> · check stock</div>
+      <div class="item-name">Aleppo pepper</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · walnut sauce</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Dried cherries, cranberries, or apricots — small bag</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · walnut sauce — pick one</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Dijon mustard</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · butter lettuce salad dressing · check stock</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Red wine vinegar</div>
+      <div class="item-note"><span class="meal-tag">Skirt Steak</span> · salad dressing · check stock</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Carbone spicy vodka sauce — 1 jar</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span></div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Pasta — 1 lb rigatoni or penne</div>
+      <div class="item-note"><span class="meal-tag">Vodka Pasta</span> · plain buttered noodles for Walker</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Red lentils — 1 cup or small bag 🧒</div>
+      <div class="item-note">Walker's Red Lentil Soup (Sunday batch prep)</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Cumin 🧒</div>
+      <div class="item-note">Walker's Red Lentil Soup — check pantry first</div>
     </div>
   </div>
 
@@ -525,7 +605,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Sandwich bread — Dave's Killer Bread</div>
-      <div class="item-note">Go-to brand · Always-buy</div>
+      <div class="item-note">Go-to brand · Always-buy · also Walker Mon soup lunch</div>
     </div>
   </div>
 
@@ -553,8 +633,16 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
+      <div class="item-name">Frozen edamame — 1 bag</div>
+      <div class="item-note"><span class="meal-tag">Soba Tofu</span> · shelled · side dish + Walker's Tue lunch</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
       <div class="item-name">Frozen peas 🧒 — 1 bag</div>
-      <div class="item-note">Always-buy · also Walker's egg muffin week side</div>
+      <div class="item-note">Always-buy · Walker Thu + Fri lunches</div>
     </div>
   </div>
 </section>
@@ -567,7 +655,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">🔄 Jasmine rice — restock</div>
-      <div class="item-note"><span class="restock-tag">Due May 18 — overdue</span> · Lundberg or similar · needed for <span class="meal-tag">Salmon Teriyaki</span></div>
+      <div class="item-note"><span class="restock-tag">Due May 18 — overdue</span> · Lundberg or similar · needed for <span class="meal-tag">Skirt Steak</span> rice side</div>
     </div>
   </div>
 
