@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🛒 Grocery List — Week 3</title>
+  <title>🛒 Grocery List — Week 4</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -234,7 +234,7 @@
 
 <header>
   <h1>🛒 Grocery List</h1>
-  <p>Week of July 13 &nbsp;·&nbsp; Week 3 &nbsp;·&nbsp; Pass 3</p>
+  <p>Week of July 22 &nbsp;·&nbsp; Week 4 &nbsp;·&nbsp; Pass 3</p>
   <div class="progress-bar-wrap">
     <div class="progress-bar" id="progressBar" style="width:0%"></div>
   </div>
@@ -243,10 +243,10 @@
 
 <div class="meals-banner">
   <h2>🍽 This Week's Meals</h2>
-  <div class="meal-item"><span class="meal-num">1.</span> Thai Beef with Basil (Mama Thai) — jasmine rice, garlicky green beans</div>
-  <div class="meal-item"><span class="meal-num">2.</span> Creamy Miso Pasta — broccolini on the side</div>
-  <div class="meal-item"><span class="meal-num">3.</span> Marry Me Chicken — sun-dried tomatoes, cream sauce (Pass 3 = odd → chicken)</div>
-  <div class="walker-note">🧒 Walker lunches: Turkey Meatball week — Sunday batch meatballs, mashed sweet potato, dinner leftovers</div>
+  <div class="meal-item"><span class="meal-num">1.</span> Nobu Black Cod — steamed jasmine rice, baby bok choy</div>
+  <div class="meal-item"><span class="meal-num">2.</span> Big Italian — salami, fresh mozz, tomatoes, artichokes, pepperoncini, crusty bread</div>
+  <div class="meal-item"><span class="meal-num">3.</span> Mapo Tofu Scramble — steamed rice, roasted broccoli</div>
+  <div class="walker-note">🧒 Walker lunches: Bean Bowl week — Sunday batch black beans + rice, avocado + quesadillas, sweet potato, dinner leftovers</div>
 </div>
 
 <!-- PRODUCE -->
@@ -256,48 +256,64 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Green beans — ~1 lb</div>
-      <div class="item-note"><span class="meal-tag">Thai Beef</span> · garlicky green beans side · also Walker Tue lunch</div>
+      <div class="item-name">Baby bok choy — 2–3 heads</div>
+      <div class="item-note"><span class="meal-tag">Black Cod</span> · steamed · Walker: soft and mild, toddler-friendly</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Garlic — 1 head</div>
-      <div class="item-note"><span class="meal-tag">Thai Beef</span> 3 cloves · green bean side · <span class="meal-tag">Marry Me Chicken</span> 3 cloves</div>
+      <div class="item-name">Garlic — 1–2 heads</div>
+      <div class="item-note"><span class="meal-tag">Black Cod</span> · <span class="meal-tag">Mapo Tofu</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Thai basil — 1 bunch</div>
-      <div class="item-note"><span class="meal-tag">Thai Beef</span> · ½ cup needed · Asian market or well-stocked produce</div>
+      <div class="item-name">Ginger — small fresh piece</div>
+      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · ~1 inch needed</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Thai chillies + spur chili</div>
-      <div class="item-note"><span class="meal-tag">Thai Beef</span> · to taste · often at Asian grocery</div>
+      <div class="item-name">Scallions — 1 bunch</div>
+      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · 3 scallions</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Broccolini — 1–2 bunches</div>
-      <div class="item-note"><span class="meal-tag">Miso Pasta</span> · side dish</div>
+      <div class="item-name">Fresh basil — large bunch</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span> · need ~2 cups</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Fresh basil — 1 bunch</div>
-      <div class="item-note"><span class="meal-tag">Marry Me Chicken</span> · garnish</div>
+      <div class="item-name">Red onion — 1 small</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span> · ½ onion needed</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Ripe tomatoes — ~2 lbs</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span> · 1.5 lbs needed + everyday use</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Broccoli — 1 head</div>
+      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · roasted side · Walker: florets steamed</div>
     </div>
   </div>
 
@@ -305,7 +321,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Sweet potatoes — 1–2 🧒</div>
-      <div class="item-note">Walker lunch: mashed sweet potato Mon + roasted cubes Thu</div>
+      <div class="item-note">Walker lunches: roasted cubes Wed + bean bowl topping</div>
     </div>
   </div>
 
@@ -313,15 +329,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Avocados — 2–3</div>
-      <div class="item-note">Always-buy</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Tomatoes × 2</div>
-      <div class="item-note">Always-buy</div>
+      <div class="item-note">Always-buy · Walker Mon lunch (bean bowl)</div>
     </div>
   </div>
 
@@ -329,7 +337,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Cherry tomatoes — 1 pint</div>
-      <div class="item-note">Always-buy · also Walker Tue lunch</div>
+      <div class="item-note">Always-buy</div>
     </div>
   </div>
 
@@ -345,7 +353,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Baby spinach — 1 bag</div>
-      <div class="item-note">Always-buy · Walker lunch Wed (wilted with meatballs)</div>
+      <div class="item-note">Always-buy</div>
     </div>
   </div>
 
@@ -365,24 +373,24 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Ground beef — ~1.5 lbs</div>
-      <div class="item-note"><span class="meal-tag">Thai Beef</span> · pull plain portion for Walker before saucing</div>
+      <div class="item-name">Nobu black cod — frozen (Costco)</div>
+      <div class="item-note"><span class="meal-tag">Black Cod</span> · check freezer first · Walker: small plain flaked portion + rice</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Chicken breasts (boneless, skinless) — ~2.25 lbs</div>
-      <div class="item-note"><span class="meal-tag">Marry Me Chicken</span> · chop small for Walker</div>
+      <div class="item-name">Ground pork or beef — ½ lb</div>
+      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · Walker: tofu + egg portion only, no spice</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Ground turkey — ~1 lb 🧒</div>
-      <div class="item-note">Walker's Sunday batch meatballs (lasts 4 days, freeze half if needed)</div>
+      <div class="item-name">Spicy salami or soppressata — 6 oz</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span></div>
     </div>
   </div>
 </section>
@@ -394,24 +402,32 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Unsalted butter — 1–2 sticks</div>
-      <div class="item-note"><span class="meal-tag">Miso Pasta</span> 6 tbsp · <span class="meal-tag">Marry Me Chicken</span> 3 tbsp · also Walker pasta portions</div>
+      <div class="item-name">Silken tofu — 1 lb</div>
+      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · silken not firm</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Parmesan — block or wedge</div>
-      <div class="item-note"><span class="meal-tag">Miso Pasta</span> 4 oz finely grated · <span class="meal-tag">Marry Me Chicken</span> ½ cup</div>
+      <div class="item-name">Fresh mozzarella — 8 oz</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Heavy cream — 1 cup</div>
-      <div class="item-note"><span class="meal-tag">Marry Me Chicken</span> · ½–¾ cup needed</div>
+      <div class="item-name">Shredded cheese — 1 bag 🧒</div>
+      <div class="item-note">Walker lunches: bean bowls + Fri quesadilla</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Eggs — 1 dozen</div>
+      <div class="item-note">Vital Farms pasture-raised · Always-buy · <span class="meal-tag">Mapo Tofu</span> needs 5</div>
     </div>
   </div>
 
@@ -430,14 +446,6 @@
       <div class="item-note">Provolone, fresh mozz, brie, or cheddar · Always-buy</div>
     </div>
   </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Eggs — 1 dozen</div>
-      <div class="item-note">Vital Farms pasture-raised · Always-buy · 1 egg for Walker meatballs</div>
-    </div>
-  </div>
 </section>
 
 <!-- PANTRY & DRY GOODS -->
@@ -447,16 +455,8 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Pasta (16 oz) — spaghetti, linguine, or bucatini</div>
-      <div class="item-note"><span class="meal-tag">Miso Pasta</span> · plain buttered portion for Walker · leftover = Walker Thu lunch</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">White miso — small tub</div>
-      <div class="item-note"><span class="meal-tag">Miso Pasta</span> · 3 tbsp needed</div>
+      <div class="item-name">Black bean garlic sauce — 1 jar</div>
+      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · 2 tbsp needed · check pantry</div>
     </div>
   </div>
 
@@ -464,63 +464,71 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Tomato paste — small can or tube</div>
-      <div class="item-note"><span class="meal-tag">Marry Me Chicken</span> · 1 tbsp needed · check stock</div>
+      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · 1 tbsp needed · check stock</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Chicken stock — 32 oz carton</div>
-      <div class="item-note"><span class="meal-tag">Marry Me Chicken</span> · 1 cup needed</div>
+      <div class="item-name">Sichuan peppercorns</div>
+      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · check pantry · black pepper works as sub</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Sun-dried tomatoes in oil — 1 jar</div>
-      <div class="item-note"><span class="meal-tag">Marry Me Chicken</span> · ⅓ cup sliced</div>
+      <div class="item-name">Soy sauce</div>
+      <div class="item-note"><span class="meal-tag">Black Cod</span> + <span class="meal-tag">Mapo Tofu</span> · check pantry</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Fish sauce</div>
-      <div class="item-note"><span class="meal-tag">Thai Beef</span> · ½ tbsp needed · check pantry first</div>
+      <div class="item-name">Sesame oil</div>
+      <div class="item-note"><span class="meal-tag">Black Cod</span> · check pantry</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Palm sugar (or light brown sugar)</div>
-      <div class="item-note"><span class="meal-tag">Thai Beef</span> · 1 tbsp · palm sugar at Asian market; brown sugar works too</div>
+      <div class="item-name">Quartered artichoke hearts, canned</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span> · ¾ cup needed</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Black sweet soy sauce (kecap manis)</div>
-      <div class="item-note"><span class="meal-tag">Thai Beef</span> · ¼ tsp · Asian market · check pantry first</div>
+      <div class="item-name">Pickled pepperoncini — 1 jar</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span> · ~12 needed</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Breadcrumbs 🧒</div>
-      <div class="item-note">Walker's mini turkey meatballs (Sunday batch)</div>
+      <div class="item-name">Red wine vinegar</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span> · ¼ cup · check pantry</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Polenta — tube or dry (optional) 🧒</div>
-      <div class="item-note">Walker Fri lunch with leftover Marry Me Chicken · nice but skip if stocked</div>
+      <div class="item-name">Olive oil</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span> + <span class="meal-tag">Mapo Tofu</span> · check pantry</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Black beans, canned × 2 🧒</div>
+      <div class="item-note">Walker's Sunday batch cook: Bean Bowls</div>
     </div>
   </div>
 
@@ -544,6 +552,22 @@
 <!-- BREAD & BAKERY -->
 <section>
   <div class="section-header">🍞 Bread &amp; Bakery</div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Crusty sesame bread or ciabatta — small loaf</div>
+      <div class="item-note"><span class="meal-tag">Big Italian</span> · ~6 oz</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Flour tortillas, small 🧒</div>
+      <div class="item-note">Walker lunches: Mon bean quesadilla + Fri cheese quesadilla</div>
+    </div>
+  </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
@@ -578,7 +602,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Frozen peas 🧒 — 1 bag</div>
-      <div class="item-note">Always-buy · Walker meatball bowls Mon + meatball pasta Wed</div>
+      <div class="item-note">Always-buy · Walker bean bowls + quick sides</div>
     </div>
   </div>
 </section>
@@ -590,16 +614,16 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">🔄 Jasmine rice — restock</div>
-      <div class="item-note"><span class="restock-tag">Due May 18 — overdue</span> · Lundberg or similar · needed for <span class="meal-tag">Thai Beef</span> rice side</div>
+      <div class="item-name">🔄 Cooking oil — restock</div>
+      <div class="item-note"><span class="restock-tag">Due May 8 — overdue</span> · Neutral oil: avocado, canola, or safflower</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">🔄 Cooking oil — restock</div>
-      <div class="item-note"><span class="restock-tag">Due May 8 — overdue</span> · Neutral oil: avocado, canola, or safflower</div>
+      <div class="item-name">🔄 Jasmine rice — restock</div>
+      <div class="item-note"><span class="restock-tag">Due May 18 — overdue</span> · Lundberg or similar · needed for <span class="meal-tag">Black Cod</span> + <span class="meal-tag">Mapo Tofu</span></div>
     </div>
   </div>
 
