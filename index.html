@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🛒 Grocery List — Week 4</title>
+  <title>🛒 Grocery List — Week 1</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -234,7 +234,7 @@
 
 <header>
   <h1>🛒 Grocery List</h1>
-  <p>Week of July 22 &nbsp;·&nbsp; Week 4 &nbsp;·&nbsp; Pass 3</p>
+  <p>Week of August 17 &nbsp;·&nbsp; Week 1 &nbsp;·&nbsp; Pass 4</p>
   <div class="progress-bar-wrap">
     <div class="progress-bar" id="progressBar" style="width:0%"></div>
   </div>
@@ -243,10 +243,10 @@
 
 <div class="meals-banner">
   <h2>🍽 This Week's Meals</h2>
-  <div class="meal-item"><span class="meal-num">1.</span> Nobu Black Cod — steamed jasmine rice, baby bok choy</div>
-  <div class="meal-item"><span class="meal-num">2.</span> Big Italian — salami, fresh mozz, tomatoes, artichokes, pepperoncini, crusty bread</div>
-  <div class="meal-item"><span class="meal-num">3.</span> Mapo Tofu Scramble — steamed rice, roasted broccoli</div>
-  <div class="walker-note">🧒 Walker lunches: Bean Bowl week — Sunday batch black beans + rice, avocado + quesadillas, sweet potato, dinner leftovers</div>
+  <div class="meal-item"><span class="meal-num">1.</span> Salmon Teriyaki — jasmine rice, cucumber salad</div>
+  <div class="meal-item"><span class="meal-num">2.</span> Oven Chicken Thighs &amp; Roasted Veg — arugula salad</div>
+  <div class="meal-item"><span class="meal-num">3.</span> Cozy Bowl — short-grain rice, ginger scrambled eggs, Persian cucumbers, sesame seeds</div>
+  <div class="walker-note">🧒 Walker lunches: Egg Muffin week — Sunday batch 6–8 mini egg muffins (egg, cheese, bell pepper, zucchini, spinach); Mon flaked salmon + rice + peas; Tue egg muffins; Wed shredded chicken + veg; Thu egg muffins + snap peas + cheese cubes; Fri buttered rice + egg + cherry tomatoes</div>
 </div>
 
 <!-- PRODUCE -->
@@ -256,56 +256,32 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Baby bok choy — 2–3 heads</div>
-      <div class="item-note"><span class="meal-tag">Black Cod</span> · steamed · Walker: soft and mild, toddler-friendly</div>
+      <div class="item-name">Cucumbers × 2</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · cucumber salad · English or Persian</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Garlic — 1–2 heads</div>
-      <div class="item-note"><span class="meal-tag">Black Cod</span> · <span class="meal-tag">Mapo Tofu</span></div>
+      <div class="item-name">Persian cucumbers — 8–9</div>
+      <div class="item-note"><span class="meal-tag">Cozy Bowl</span> · 3 per 2 servings, scaled ~3× · seasoned with sesame oil</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Ginger — small fresh piece</div>
-      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · ~1 inch needed</div>
+      <div class="item-name">Fresh ginger — 1 large knob</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> + <span class="meal-tag">Cozy Bowl</span> · need ~2 inches total</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Scallions — 1 bunch</div>
-      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · 3 scallions</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Fresh basil — large bunch</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span> · need ~2 cups</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Red onion — 1 small</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span> · ½ onion needed</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Ripe tomatoes — ~2 lbs</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span> · 1.5 lbs needed + everyday use</div>
+      <div class="item-name">Garlic — 1 head</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> + <span class="meal-tag">Chicken Thighs</span></div>
     </div>
   </div>
 
@@ -313,15 +289,55 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Broccoli — 1 head</div>
-      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · roasted side · Walker: florets steamed</div>
+      <div class="item-note"><span class="meal-tag">Chicken Thighs</span> · roasted · or sub zucchini/carrots</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Sweet potatoes — 1–2 🧒</div>
-      <div class="item-note">Walker lunches: roasted cubes Wed + bean bowl topping</div>
+      <div class="item-name">Zucchini — 1–2</div>
+      <div class="item-note"><span class="meal-tag">Chicken Thighs</span> · roasting veg + Walker egg muffins (batch)</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Carrots — 3–4</div>
+      <div class="item-note"><span class="meal-tag">Chicken Thighs</span> · roasting veg</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Arugula — 1 bag</div>
+      <div class="item-note"><span class="meal-tag">Chicken Thighs</span> · salad with lemon + olive oil</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Lemon × 1</div>
+      <div class="item-note"><span class="meal-tag">Chicken Thighs</span> · arugula salad dressing</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Bell pepper × 1 🧒</div>
+      <div class="item-note">Walker egg muffins (Sunday batch cook)</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Snap peas — small bag 🧒</div>
+      <div class="item-note">Walker lunches Thu</div>
     </div>
   </div>
 
@@ -329,7 +345,15 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Avocados — 2–3</div>
-      <div class="item-note">Always-buy · Walker Mon lunch (bean bowl)</div>
+      <div class="item-note">Always-buy</div>
+    </div>
+  </div>
+
+  <div class="item" onclick="toggle(this)">
+    <div class="checkbox"></div>
+    <div class="item-text">
+      <div class="item-name">Tomatoes × 2</div>
+      <div class="item-note">Always-buy</div>
     </div>
   </div>
 
@@ -337,7 +361,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Cherry tomatoes — 1 pint</div>
-      <div class="item-note">Always-buy</div>
+      <div class="item-note">Always-buy · Walker Fri lunch</div>
     </div>
   </div>
 
@@ -353,7 +377,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Baby spinach — 1 bag</div>
-      <div class="item-note">Always-buy</div>
+      <div class="item-note">Always-buy · also Walker egg muffins (batch)</div>
     </div>
   </div>
 
@@ -373,24 +397,16 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Nobu black cod — frozen (Costco)</div>
-      <div class="item-note"><span class="meal-tag">Black Cod</span> · check freezer first · Walker: small plain flaked portion + rice</div>
+      <div class="item-name">Salmon fillet — ~2 lbs</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · skin-on or off · Walker: flaked plain before saucing</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Ground pork or beef — ½ lb</div>
-      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · Walker: tofu + egg portion only, no spice</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Spicy salami or soppressata — 6 oz</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span></div>
+      <div class="item-name">Bone-in skin-on chicken thighs — ~2.5 lbs (5–6 thighs)</div>
+      <div class="item-note"><span class="meal-tag">Chicken Thighs</span> · Mary's Organic if available · Walker: shred + roasted veg</div>
     </div>
   </div>
 </section>
@@ -402,16 +418,16 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Silken tofu — 1 lb</div>
-      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · silken not firm</div>
+      <div class="item-name">Eggs — 2 dozen</div>
+      <div class="item-note">Vital Farms pasture-raised · High-egg week: Cozy Bowl needs ~12 (3× scale) + egg muffins need 6–8</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Fresh mozzarella — 8 oz</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span></div>
+      <div class="item-name">Unsalted butter — 1–2 sticks</div>
+      <div class="item-note"><span class="meal-tag">Cozy Bowl</span> · ~18 tbsp at 3× scale · check pantry</div>
     </div>
   </div>
 
@@ -419,15 +435,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Shredded cheese — 1 bag 🧒</div>
-      <div class="item-note">Walker lunches: bean bowls + Fri quesadilla</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Eggs — 1 dozen</div>
-      <div class="item-note">Vital Farms pasture-raised · Always-buy · <span class="meal-tag">Mapo Tofu</span> needs 5</div>
+      <div class="item-note">Walker egg muffins (Sunday batch)</div>
     </div>
   </div>
 
@@ -443,7 +451,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Sandwich cheese</div>
-      <div class="item-note">Provolone, fresh mozz, brie, or cheddar · Always-buy</div>
+      <div class="item-note">Provolone, fresh mozz, brie, or cheddar · Always-buy · also Walker Thu lunch cheese cubes</div>
     </div>
   </div>
 </section>
@@ -455,80 +463,64 @@
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Black bean garlic sauce — 1 jar</div>
-      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · 2 tbsp needed · check pantry</div>
+      <div class="item-name">🔄 Jasmine rice — restock</div>
+      <div class="item-note"><span class="restock-tag">Due May 18 — overdue</span> · <span class="meal-tag">Salmon Teriyaki</span> · Lundberg or similar</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Tomato paste — small can or tube</div>
-      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · 1 tbsp needed · check stock</div>
+      <div class="item-name">Short-grain white rice — 1 small bag</div>
+      <div class="item-note"><span class="meal-tag">Cozy Bowl</span> · Japanese-style, not jasmine · need ~6 cups dry at 3× scale</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Sichuan peppercorns</div>
-      <div class="item-note"><span class="meal-tag">Mapo Tofu</span> · check pantry · black pepper works as sub</div>
+      <div class="item-name">Mirin — check pantry</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · teriyaki glaze</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Soy sauce</div>
-      <div class="item-note"><span class="meal-tag">Black Cod</span> + <span class="meal-tag">Mapo Tofu</span> · check pantry</div>
+      <div class="item-name">Toasted sesame oil — check pantry</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> + <span class="meal-tag">Cozy Bowl</span> · both recipes use it</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Sesame oil</div>
-      <div class="item-note"><span class="meal-tag">Black Cod</span> · check pantry</div>
+      <div class="item-name">Sesame seeds, toasted — check pantry</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> + <span class="meal-tag">Cozy Bowl</span></div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Quartered artichoke hearts, canned</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span> · ¾ cup needed</div>
+      <div class="item-name">Rice vinegar — check pantry</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> · cucumber salad</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Pickled pepperoncini — 1 jar</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span> · ~12 needed</div>
+      <div class="item-name">Soy sauce — check pantry</div>
+      <div class="item-note"><span class="meal-tag">Salmon Teriyaki</span> + <span class="meal-tag">Cozy Bowl</span> · low sodium preferred</div>
     </div>
   </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
     <div class="item-text">
-      <div class="item-name">Red wine vinegar</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span> · ¼ cup · check pantry</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Olive oil</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span> + <span class="meal-tag">Mapo Tofu</span> · check pantry</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Black beans, canned × 2 🧒</div>
-      <div class="item-note">Walker's Sunday batch cook: Bean Bowls</div>
+      <div class="item-name">🔄 Honey — restock</div>
+      <div class="item-note"><span class="restock-tag">Due July 27 — overdue</span> · <span class="meal-tag">Salmon Teriyaki</span> · teriyaki glaze · Pure Wildflower preferred</div>
     </div>
   </div>
 
@@ -552,22 +544,6 @@
 <!-- BREAD & BAKERY -->
 <section>
   <div class="section-header">🍞 Bread &amp; Bakery</div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Crusty sesame bread or ciabatta — small loaf</div>
-      <div class="item-note"><span class="meal-tag">Big Italian</span> · ~6 oz</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">Flour tortillas, small 🧒</div>
-      <div class="item-note">Walker lunches: Mon bean quesadilla + Fri cheese quesadilla</div>
-    </div>
-  </div>
 
   <div class="item" onclick="toggle(this)">
     <div class="checkbox"></div>
@@ -602,7 +578,7 @@
     <div class="checkbox"></div>
     <div class="item-text">
       <div class="item-name">Frozen peas 🧒 — 1 bag</div>
-      <div class="item-note">Always-buy · Walker bean bowls + quick sides</div>
+      <div class="item-note">Always-buy · Walker Mon lunch (salmon leftover plate)</div>
     </div>
   </div>
 </section>
@@ -616,14 +592,6 @@
     <div class="item-text">
       <div class="item-name">🔄 Cooking oil — restock</div>
       <div class="item-note"><span class="restock-tag">Due May 8 — overdue</span> · Neutral oil: avocado, canola, or safflower</div>
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <div class="checkbox"></div>
-    <div class="item-text">
-      <div class="item-name">🔄 Jasmine rice — restock</div>
-      <div class="item-note"><span class="restock-tag">Due May 18 — overdue</span> · Lundberg or similar · needed for <span class="meal-tag">Black Cod</span> + <span class="meal-tag">Mapo Tofu</span></div>
     </div>
   </div>
 
